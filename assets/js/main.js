@@ -57,7 +57,7 @@ setTimeout(() => {
           backgroundColor: 'rgb(237, 78, 78)',
           borderColor: 'rgba(255, 0, 0, .75)',
           borderWidth: 1,
-          data: results.map(x => Math.round(x.data.main.temp)),
+          data: results.map(x => (x.data.main.temp)),
           fill: false,
           cubicInterpolationMode: 'monotone'
         },
@@ -66,7 +66,7 @@ setTimeout(() => {
           backgroundColor: 'rgba(34, 34, 34, 1)',
           borderColor: 'rgba(0, 0, 0, .75)',
           borderWidth: 1,
-          data: results.map(x => Math.round(x.data.main.temp_max)),
+          data: results.map(x => (x.data.main.temp_max)),
           fill: false,
           cubicInterpolationMode: 'monotone'
         },
@@ -75,7 +75,7 @@ setTimeout(() => {
           backgroundColor: 'rgb(210, 190, 42)',
           borderColor: 'rgba(122, 122, 31, .75)',
           borderWidth: 1,
-          data: results.map(x => Math.round(x.data.main.temp_min)),
+          data: results.map(x => (x.data.main.temp_min)),
           fill: false,
           cubicInterpolationMode: 'monotone'
         }
@@ -99,7 +99,7 @@ setTimeout(() => {
           backgroundColor: 'rgb(237, 78, 78)',
           borderColor: 'rgba(255, 0, 0, .75)',
           borderWidth: 1,
-          data: results.map(x => Math.round(x.data.main.humidity)),
+          data: results.map(x => (x.data.main.humidity)),
           fill: false,
           cubicInterpolationMode: 'monotone'
         },
