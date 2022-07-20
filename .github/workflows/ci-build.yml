@@ -26,7 +26,11 @@ jobs:
           if [ $status -eq 0 ]; then
               echo $response > $FILE
               echo "$FILE saved."
-              echo `date +"%Y%m%d"` >> ./assets/data.txt
+              if grep -Fxq `date +"%Y%m%d"` assets/data.txt; then 
+                echo "Date exists, Nothing to do" ; 
+              else 
+                echo `date +"%Y%m%d"` >> ./assets/data.txt; 
+              fi
           else
               echo "curl exit code: ($status) $response"
               exit $status
