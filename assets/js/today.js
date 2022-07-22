@@ -30,6 +30,10 @@ function rawPath() {
     window.open(rawDataPath, "_blank")
 }
 
+function historical() {
+    window.open("/history", "_self")
+}
+
 fetch(`./assets/today.json`)
     .then(response => response.json())
     .then(data => {

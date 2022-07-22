@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   <title>Historical (30d) Weather Data for Hyderabad</title>
-  <meta name="description" content="Historical (30d) Weather Data for Hyderabad" />
+  <meta name="description" content="Historical Weather Data for Hyderabad" />
   <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
   <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
   <meta name="author" content="KD Puvvadi" />
@@ -28,10 +28,7 @@
         <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none fw-bold">
           <i class="fa-solid fa-cloud"></i>&nbsp; HWeather
         </a>
-        <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-left mb-md-0">
-          <li><a href="/history.html" class="nav-link px-2 text-white">Historical</a></li>
-        </ul>
-      </div>
+        </div>
     </div>
   </header>
   <div class="content">
@@ -49,8 +46,9 @@
     </a>
 
     <div class="header">
-      <div class="chartjs-title">Historical Weather in Hyderabad</div>
+      <div class="chartjs-title">Weather in Hyderabad</div>
       <div class="chartjs-caption">Temperature & Humidity in the past 30 days</div>
+      <button onclick="historical()" type="button" class="btn btn-success chartjs-captions">Historical(30d)</button>
     </div>
 
     <div class="row mb-3">
