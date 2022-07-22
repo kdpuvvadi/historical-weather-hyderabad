@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   <title>Historical (30d) Weather Data for Hyderabad</title>
-  <meta name="description" content="Historical Weather Data for Hyderabad" />
+  <meta name="description" content="Historical (30d) Weather Data for Hyderabad" />
   <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
   <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
   <meta name="author" content="KD Puvvadi" />
@@ -28,7 +28,7 @@
         <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none fw-bold">
           <i class="fa-solid fa-cloud"></i>&nbsp; HWeather
         </a>
-        </div>
+      </div>
     </div>
   </header>
   <div class="content">
@@ -46,47 +46,26 @@
     </a>
 
     <div class="header">
-      <div class="chartjs-title">Weather in Hyderabad</div>
+      <div class="chartjs-title">Historical Weather in Hyderabad</div>
       <div class="chartjs-caption">Temperature & Humidity in the past 30 days</div>
-      <button onclick="historical()" type="button" class="btn btn-success chartjs-captions">Historical(30d)</button>
     </div>
 
     <div class="row mb-3">
-        <dl class="row col-md-6">
-          <dt class="col-3">Date</dt>
-          <dd class="col-9 text-success" id="dateofday"></dd>
-          <dt class="col-3">Temp</dt>
-          <dd  class="col-9" id="temp"></dd>
-          <dt class="col-3">Min Temp</dt>
-          <dd class="col-9" id="tempmin"></dd>
-          <dt class="col-3">Max Temp</dt>
-          <dd class="col-9" id="tempmax"></dd>
-          <dt class="col-3">Feels Like</dt>
-          <dd class="col-9" id="tempfeel"></dd>
-        </dl>
-        <dl class="row col-md-6">
-          <dt class="col-3">Clouds</dt>
-          <dd class="col-9" id="clouds"></dd>
-          <dt class="col-3">Humidity</dt>
-          <dd  class="col-9" id="humidity"></dd>
-          <dt class="col-3">Wind Speed</dt>
-          <dd class="col-9" id="windspeed"></dd>
-          <dt class="col-3">Visibility</dt>
-          <dd class="col-9" id="vis"></dd>
-          <dt class="col-3">Pressure</dt>
-          <dd class="col-9" id="press"></dd>
-        </dl>
+      <div class="col-md-6">
+        <h5 class="text-danger mb-3">Temperature Hyderabad</h5>
+        <canvas id="myChartTemp"></canvas>
+      </div>
+      <div class="col-md-6">
+        <h5 class="text-danger mb-3">Humidity in Hyderabad</h5>
+        <canvas id="myChartRH"></canvas>
+      </div>
     </div>
-    <div class="align-self-center mb-3">
-      <button onclick="rawPath()" type="button" class="btn btn-success">Raw data</button>
-    </div>
-    
   </div>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.5.1/chart.min.js"
     integrity="sha512-Wt1bJGtlnMtGP0dqNFH1xlkLBNpEodaiQ8ZN5JLA5wpc1sUlk/O5uuOMNgvzddzkpvZ9GLyYNa8w2s7rqiTk5Q=="
     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-  <script src="assets/js/today.js"></script>
+  <script src="assets/js/main.js"></script>
 </body>
 
 </html>

@@ -24,59 +24,63 @@ function getInPSI(pressure) {
 var dateToday = dd + ' ' + month + ' ' + yyyy ;
     document.getElementById("dateofday").innerText = dateToday
 
-rawDataPath = '/assets/data/' + today + '.json'
+rawDataPath = '/assets/today.json'
 
 function rawPath() {
     window.open(rawDataPath, "_blank")
 }
 
-fetch(`./assets/data/${today}.json`)
+function historical() {
+    window.open("/history", "_self")
+}
+
+fetch(`./assets/today.json`)
     .then(response => response.json())
     .then(data => {
         document.querySelector("#temp").innerText = data.main.temp + ' °C'
     })
 
-fetch(`./assets/data/${today}.json`)
+fetch(`./assets/today.json`)
     .then(response => response.json())
     .then(data => {
         document.querySelector("#tempmin").innerText = data.main.temp_min + ' °C'
     })
 
-fetch(`./assets/data/${today}.json`)
+fetch(`./assets/today.json`)
     .then(response => response.json())
     .then(data => {
         document.querySelector("#tempmax").innerText = data.main.temp_max + ' °C'
     })
-fetch(`./assets/data/${today}.json`)
+fetch(`./assets/today.json`)
     .then(response => response.json())
     .then(data => {
         document.querySelector("#tempfeel").innerText = data.main.feels_like + ' °C'
     })
-fetch(`./assets/data/${today}.json`)
+fetch(`./assets/today.json`)
     .then(response => response.json())
     .then(data => {
         document.querySelector("#humidity").innerText = data.main.humidity + '%'
     })
 
-fetch(`./assets/data/${today}.json`)
+fetch(`./assets/today.json`)
     .then(response => response.json())
     .then(data => {
         document.querySelector("#windspeed").innerText = data.wind.speed + ' m/s' +  ' ' + getDirection(data.wind.deg)
     })
 
-fetch(`./assets/data/${today}.json`)
+fetch(`./assets/today.json`)
     .then(response => response.json())
     .then(data => {
         document.querySelector("#vis").innerText =  getVisibility(data.visibility) + ' KM'
     })
     
-fetch(`./assets/data/${today}.json`)
+fetch(`./assets/today.json`)
     .then(response => response.json())
     .then(data => {
         document.querySelector("#press").innerText = getInPSI(data.main.pressure) + ' psi'
     })
 
-fetch(`./assets/data/${today}.json`)
+fetch(`./assets/today.json`)
     .then(response => response.json())
     .then(data => {
         document.querySelector("#clouds").innerText = data.clouds.all + '%'
