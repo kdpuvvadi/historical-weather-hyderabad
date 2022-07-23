@@ -37,51 +37,14 @@ function historical() {
 fetch(`./assets/today.json`)
     .then(response => response.json())
     .then(data => {
-        document.querySelector("#temp").innerText = data.main.temp + ' °C'
-    })
-
-fetch(`./assets/today.json`)
-    .then(response => response.json())
-    .then(data => {
-        document.querySelector("#tempmin").innerText = data.main.temp_min + ' °C'
-    })
-
-fetch(`./assets/today.json`)
-    .then(response => response.json())
-    .then(data => {
-        document.querySelector("#tempmax").innerText = data.main.temp_max + ' °C'
-    })
-fetch(`./assets/today.json`)
-    .then(response => response.json())
-    .then(data => {
-        document.querySelector("#tempfeel").innerText = data.main.feels_like + ' °C'
-    })
-fetch(`./assets/today.json`)
-    .then(response => response.json())
-    .then(data => {
-        document.querySelector("#humidity").innerText = data.main.humidity + '%'
-    })
-
-fetch(`./assets/today.json`)
-    .then(response => response.json())
-    .then(data => {
-        document.querySelector("#windspeed").innerText = data.wind.speed + ' m/s' +  ' ' + getDirection(data.wind.deg)
-    })
-
-fetch(`./assets/today.json`)
-    .then(response => response.json())
-    .then(data => {
-        document.querySelector("#vis").innerText =  getVisibility(data.visibility) + ' KM'
-    })
-    
-fetch(`./assets/today.json`)
-    .then(response => response.json())
-    .then(data => {
-        document.querySelector("#press").innerText = getInPSI(data.main.pressure) + ' psi'
-    })
-
-fetch(`./assets/today.json`)
-    .then(response => response.json())
-    .then(data => {
+        document.querySelector("#temp").innerText = data.main.temp + ' °C',
+        document.querySelector("#tempmin").innerText = data.main.temp_min + ' °C',
+        document.querySelector("#tempmax").innerText = data.main.temp_max + ' °C',
+        document.querySelector("#tempfeel").innerText = data.main.feels_like + ' °C',
+        document.querySelector("#humidity").innerText = data.main.humidity + '%',
+        document.querySelector("#windspeed").innerText = data.wind.speed + ' m/s' +  ' ' + getDirection(data.wind.deg),
+        document.querySelector("#vis").innerText =  getVisibility(data.visibility) + ' KM',
+        document.querySelector("#press").innerText = getInPSI(data.main.pressure) + ' psi',
         document.querySelector("#clouds").innerText = data.clouds.all + '%'
-    })
+
+    });
